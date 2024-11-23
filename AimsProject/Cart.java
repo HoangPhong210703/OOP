@@ -18,6 +18,10 @@ public class Cart {
             System.out.println("The cart is full");
         }
     }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdlist){
+
+    }
         
     public void removeDigitalVideoDisc(DigitalVideoDisc disc){
 
@@ -51,6 +55,16 @@ public class Cart {
         return total;
     }
 
+    public float totalCostSelected(DigitalVideoDisc[] dvd_list){
+        float total = 0;
+
+        for (int i=0; i<dvd_list.length; i++){
+            total += dvd_list[i].getCost();
+        }
+
+        return total;
+    }
+
     public void displayQty(){
         System.out.printf("Qty ordered: %d", qytOrdered); 
     }
@@ -71,6 +85,24 @@ public class Cart {
         }
     }
 
+    public void searchPrintDigtalVideoDisc(int id_list[]){
+        DigitalVideoDisc[] temp_list = new DigitalVideoDisc[id_list.length];;
+
+        System.out.println("***********************CART************************");
+
+        for(int i=0; i<qytOrdered; i++){
+            for(int k=0; k<id_list.length; k++){
+                if (itemsOrdered[i].getId() == id_list[k]){
+                    temp_list[k] = itemsOrdered[i];
+
+                    String[] arr = itemsOrdered[i].toStringArr();    
+                    System.out.printf("ID " + arr[0] + ". DVD - [" + arr[1] + "] - [" + arr[2] + "] - [" + arr[3] + "] - [" + arr[4] +"]: [$" + arr[5] + "]\n");
+                }
+            }
+        }
+        System.out.printf("$Total cost: [%.2f]\n***************************************************", totalCostSelected(temp_list));
+ 
+    }
 
 
 }

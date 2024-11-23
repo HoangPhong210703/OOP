@@ -3,7 +3,6 @@ package TTUD.AimsProject;
 
 public class AIMS{
     public static void main(String[] args) {
-        
 
         Cart anOrder = new Cart();
 
@@ -23,15 +22,18 @@ public class AIMS{
         // anOrder.displayCart();
         // anOrder.displayQty();
         
-        System.out.println("\n----------");
-        anOrder.removeDigitalVideoDisc(dvd1);
+        // System.out.println("\n----------");
+        // anOrder.removeDigitalVideoDisc(dvd1);
 
-        System.out.println("\n----------");
-        anOrder.displayCart();
-        anOrder.displayQty();
+        // System.out.println("\n----------");
+        // anOrder.displayCart();
+        // anOrder.displayQty();
         
-        System.out.println("\n----------");
-        System.out.printf("Total cost: %.2f%n", anOrder.totalCost());
-        System.out.println("\n----------");
+        // System.out.println("\n----------");
+        // System.out.printf("Total cost: %.2f%n", anOrder.totalCost());
+        // System.out.println("\n----------");
+
+        int id_list[] = {1, 2};
+        anOrder.searchPrintDigtalVideoDisc(id_list);
     }
 }
