@@ -1,4 +1,4 @@
-package TTUD.AimsProject;
+package OOP.AimsProject;
 
 public class TestPassingParameter {
 

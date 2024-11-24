@@ -1,4 +1,4 @@
-package TTUD.AimsProject;
+package OOP.AimsProject;
 
 public class DigitalVideoDisc {
 
@@ -48,6 +48,16 @@ public class DigitalVideoDisc {
         
     }
 
+    public DigitalVideoDisc(String title, String category, String director, float cost) {
+        this.title = title;
+        this.category = category;
+        this.director = director;
+        this.cost = cost;
+
+        this.id = nbDigitalVideoDiscs;
+        nbDigitalVideoDiscs++;
+    }
+
     public DigitalVideoDisc(String title) {
         this.title = title;
 
@@ -64,16 +74,6 @@ public class DigitalVideoDisc {
         nbDigitalVideoDiscs++;
     }
     
-    public DigitalVideoDisc(String title, String category, String director, float cost) {
-        this.title = title;
-        this.category = category;
-        this.director = director;
-        this.cost = cost;
-
-        this.id = nbDigitalVideoDiscs;
-        nbDigitalVideoDiscs++;
-    }
-
     public void setTitle(String title) {
         this.title = title;
     }
