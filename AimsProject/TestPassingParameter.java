@@ -1,4 +1,4 @@
-package OOP.AimsProject;
+
 
 public class TestPassingParameter {
 
@@ -14,16 +14,16 @@ public class TestPassingParameter {
         // DigitalVideoDisc jungleDvd = new DigitalVideoDisc("Jungle");
         // DigitalVideoDisc cinderellaDvd = new DigitalVideoDisc("Cinderella");
 
-        Wrapper<DigitalVideoDisc> jungleDvd = new Wrapper<>(new DigitalVideoDisc("Jungle"));
-        Wrapper<DigitalVideoDisc> cinderellaDvd = new Wrapper<>(new DigitalVideoDisc("Cinderella"));
+        // Wrapper<DigitalVideoDisc> jungleDvd = new Wrapper<>(new DigitalVideoDisc("Jungle"));
+        // Wrapper<DigitalVideoDisc> cinderellaDvd = new Wrapper<>(new DigitalVideoDisc("Cinderella"));
 
-        swap(jungleDvd, cinderellaDvd);
+        // swap(jungleDvd, cinderellaDvd);
 
-        System.out.println("jungle dvd title: "+ jungleDvd.value.getTitle());
-        System.out.println("cinderella dvd title: "+ cinderellaDvd.value.getTitle());
+        // System.out.println("jungle dvd title: "+ jungleDvd.value.getTitle());
+        // System.out.println("cinderella dvd title: "+ cinderellaDvd.value.getTitle());
 
-        //changeTitle(jungleDvd, cinderellaDvd.getTitle());
-        System.out.println("jungle dvd title: "+ jungleDvd.value.getTitle());
+        // //changeTitle(jungleDvd, cinderellaDvd.getTitle());
+        // System.out.println("jungle dvd title: "+ jungleDvd.value.getTitle());
 
     }
 

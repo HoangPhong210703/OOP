@@ -1,28 +1,22 @@
-package OOP.AimsProject;
+import java.util.Arrays;
 
 public class StoreTest {
     public static void main(String[] args) {
-        Store store = new Store(999);
+        Store store = new Store();
 
-        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The lion king", "Animation", "Rogger Allers", 97, 19.95f);
-        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star wars", "Science fiction", "George Lucas", 87, 24.95f);
-        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
-        
-        System.out.println("\n");
-        
-        store.addDVD(dvd1);
-        store.addDVD(dvd2);
-        store.addDVD(dvd3);
+        DigitalVideoDisc dvd = new DigitalVideoDisc(0, "DVD 1", "Action", "Director 1", 123, (float) 9.99);
+        Book book = new Book(1, "Book 1", "Action", (float) 9.99, Arrays.asList("Author 1", "Author 2", "Author 3"));
+        CompactDisc cd = new CompactDisc(2, "CD 1", "Artist 1", (float) 9.99, 432);
+
+        store.addMedia(dvd);
+        store.addMedia(book);
+        store.addMedia(cd);
 
         store.displayStore();
-        System.out.println("\n");
 
-        store.removeDVD("Aladin");
+        store.removeMedia(book);
         store.displayStore();
-        System.out.println("\n");
 
-        store.removeDVD("Abcabc");
-        store.displayStore();
-        System.out.println("\n");
+        store.removeMedia(book);  
     }
 }
